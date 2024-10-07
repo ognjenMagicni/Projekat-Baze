@@ -1,0 +1,341 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D4C0A9DA-F4B8-407E-B205-FC838DB3E75C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Takmicenje</RootNamespace>
+    <AssemblyName>Takmicenje</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdditionalClasses\CellClick.cs" />
+    <Compile Include="AdditionalClasses\ChekingTasks.cs" />
+    <Compile Include="AdditionalClasses\HashClass.cs" />
+    <Compile Include="AddStudentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddStudentForm.Designer.cs">
+      <DependentUpon>AddStudentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddTaskForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddTaskForm.Designer.cs">
+      <DependentUpon>AddTaskForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdministratorRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdministratorRoom.Designer.cs">
+      <DependentUpon>AdministratorRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdministratorWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdministratorWindow.Designer.cs">
+      <DependentUpon>AdministratorWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AttachTaskForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttachTaskForm.Designer.cs">
+      <DependentUpon>AttachTaskForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="exam.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>exam.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExamPaper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExamPaper.Designer.cs">
+      <DependentUpon>ExamPaper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InputOutputForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InputOutputForm.Designer.cs">
+      <DependentUpon>InputOutputForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Insert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Insert.Designer.cs">
+      <DependentUpon>Insert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Administrator.cs" />
+    <Compile Include="Models\IO.cs" />
+    <Compile Include="Models\Room.cs" />
+    <Compile Include="Models\Student.cs" />
+    <Compile Include="Models\Task.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportWindow.Designer.cs">
+      <DependentUpon>ReportWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Repository\AdministratorRepository.cs" />
+    <Compile Include="Repository\RepositoryForAll.cs" />
+    <Compile Include="Repository\RoomRepository.cs" />
+    <Compile Include="Repository\StudentRepository.cs" />
+    <Compile Include="Repository\TaskRepository.cs" />
+    <Compile Include="results.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>results.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="studentReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>studentReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="StudentResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentResult.Designer.cs">
+      <DependentUpon>StudentResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="studentRportWin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="studentRportWin.Designer.cs">
+      <DependentUpon>studentRportWin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentSignUpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentSignUpForm.Designer.cs">
+      <DependentUpon>StudentSignUpForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentTask.Designer.cs">
+      <DependentUpon>StudentTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentTasks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentTasks.Designer.cs">
+      <DependentUpon>StudentTasks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentWindow.Designer.cs">
+      <DependentUpon>StudentWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TakmicenjeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TakmicenjeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TakmicenjeDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TakmicenjeDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TaskForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaskForm.Designer.cs">
+      <DependentUpon>TaskForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Testing.cs" />
+    <EmbeddedResource Include="AddStudentForm.resx">
+      <DependentUpon>AddStudentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddTaskForm.resx">
+      <DependentUpon>AddTaskForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdministratorRoom.resx">
+      <DependentUpon>AdministratorRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdministratorWindow.resx">
+      <DependentUpon>AdministratorWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttachTaskForm.resx">
+      <DependentUpon>AttachTaskForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="exam.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>exam.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExamPaper.resx">
+      <DependentUpon>ExamPaper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InputOutputForm.resx">
+      <DependentUpon>InputOutputForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Insert.resx">
+      <DependentUpon>Insert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>report.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportWindow.resx">
+      <DependentUpon>ReportWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="results.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>results.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="studentReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>studentReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentResult.resx">
+      <DependentUpon>StudentResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="studentRportWin.resx">
+      <DependentUpon>studentRportWin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentSignUpForm.resx">
+      <DependentUpon>StudentSignUpForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentTask.resx">
+      <DependentUpon>StudentTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentTasks.resx">
+      <DependentUpon>StudentTasks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentWindow.resx">
+      <DependentUpon>StudentWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaskForm.resx">
+      <DependentUpon>TaskForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="TakmicenjeDataSet.xsc">
+      <DependentUpon>TakmicenjeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TakmicenjeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TakmicenjeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TakmicenjeDataSet.xss">
+      <DependentUpon>TakmicenjeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TakmicenjeDataSet1.xsc">
+      <DependentUpon>TakmicenjeDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="TakmicenjeDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TakmicenjeDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TakmicenjeDataSet1.xss">
+      <DependentUpon>TakmicenjeDataSet1.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxCrystalPrintControlLib">
+      <Guid>{62862E3F-F35B-455E-9459-49EAADE80A25}</Guid>
+      <VersionMajor>13</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="CrystalPrintControlLib">
+      <Guid>{62862E3F-F35B-455E-9459-49EAADE80A25}</Guid>
+      <VersionMajor>13</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
